@@ -4,7 +4,7 @@
         helper.findAllContacts(component, event, helper);
     },
 
-    onSearchKeyCase : function(component, event, helper)
+    onSearchKeyChange : function(component, event, helper)
     {
         helper.searchContactsByKey(component, event, helper);
     },
