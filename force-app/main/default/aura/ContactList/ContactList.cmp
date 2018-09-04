@@ -2,12 +2,11 @@
  - Created by pmcclellan on 09/04/18.
  -->
 
-<aura:component description="ContactList"
-                implements="force:hasRecordId"
-                controller="ContactListController">
+ <aura:component description="ContactList"
+    implements="force:hasRecordId"
+    controller="ContactListController">
 
     <aura:attribute name="Contacts" type="Contact[]"/>
-    <!-- <aura:attribute name="AccountId" type="Id"/> -->
     <aura:attribute name="hasContact" type="Boolean" default="true"/>
     <aura:attribute name="recordId" type="String"/>
 
@@ -15,16 +14,20 @@
     <aura:handler name="SearchKey" event="c:SearchKey" action="{!c.onSearchKey}"/>
 
     <c:SearchBar />
+    
     <ui:scrollerWrapper class="scroller">
         <aura:if isTrue="{!v.hasContact}">
+
             <aura:iteration items="{!v.Contacts}" var="Contact">
                 <c:ContactTile Contact="{!Contact}" recordId="{!v.recordId}"/>
             </aura:iteration>
+
             <aura:set attribute="else">
                 <div class="no-contacts">
                     <p>No Contacts found.</p>
                 </div>
             </aura:set>
+
         </aura:if>
     </ui:scrollerWrapper>
 
