@@ -1,0 +1,23 @@
+/**
+ * Created by pmcclellan on 12/21/17.
+ */
+.THIS.contact-tile {
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.THIS .detail {
+    font-size: x-small;
+    margin-top: -3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.THIS .truncate {
+
+   width: 300px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   }

@@ -1,0 +1,31 @@
+<!--
+ - Created by pmcclellan on 12/22/17.
+ -->
+
+<aura:component description="CaseList"
+                implements="force:hasRecordId"
+                controller="ContactListController">
+
+    <aura:attribute name="Cases" type="Case[]"/>
+    <aura:attribute name="AccountId" type="Id"/>
+    <aura:attribute name="hasCase" type="Boolean" default="true"/>
+    <aura:attribute name="recordId" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="SearchKeyCase" event="c:SearchKeyCase" action="{!c.onSearchKeyCase}"/>
+
+    <c:SearchBarCases />
+    <ui:scrollerWrapper class="scroller">
+        <aura:if isTrue="{!v.hasCase}">
+            <aura:iteration items="{!v.Cases}" var="Case">
+                <c:CaseTile Case="{!Case}" recordId="{!v.recordId}"/>
+            </aura:iteration>
+            <aura:set attribute="else">
+                <div class="no-cases">
+                    <p>No Cases related to this recipient.</p>
+                </div>
+            </aura:set>
+        </aura:if>
+    </ui:scrollerWrapper>
+
+</aura:component>

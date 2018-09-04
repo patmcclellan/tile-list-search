@@ -1,0 +1,25 @@
+<!--
+ - Created by pmcclellan on 12/21/17.
+ -->
+
+<aura:component description="ContactTile">
+
+    <aura:registerEvent type="c:SelectContact" name="SelectContact"/>
+
+    <aura:attribute name="Contact" type="Contact"/>
+
+    <span onclick="{!c.onSelectContact}" >
+    <lightning:tile label="{!v.Contact.Name}" class="slds-border_bottom slds-p-around_x-small">
+        <aura:set attribute="media">
+            <lightning:icon iconName="standard:contact"/>
+        </aura:set>
+        <dl class="slds-dl_horizontal detail">
+            <dd class="slds-dl_horizontal__detail slds-tile__meta " >
+                <p class="truncate" title="Title">{!v.Contact.Title} • {!v.Contact.Account.Name}</p>
+            </dd>
+        </dl>
+    </lightning:tile>
+
+    </span>
+
+</aura:component>

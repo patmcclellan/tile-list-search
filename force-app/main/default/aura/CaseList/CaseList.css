@@ -1,0 +1,14 @@
+/**
+ * Created by pmcclellan on 12/22/17.
+ */
+.THIS.scroller {
+    height: 140px;
+    overscroll-behavior: contain;
+}
+
+.THIS .no-cases{
+    text-align: center;
+    font-style: italic;
+    padding-top: 20px;
+
+}

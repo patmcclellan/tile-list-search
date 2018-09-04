@@ -1,0 +1,7 @@
+<!--
+ - Created by pmcclellan on 12/21/17.
+ -->
+
+<aura:event type="COMPONENT" description="SelectContact">
+    <aura:attribute name="Contact" type="Contact"/>
+</aura:event>
