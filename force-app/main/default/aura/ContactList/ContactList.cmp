@@ -19,7 +19,7 @@
         <aura:if isTrue="{!v.hasContact}">
 
             <aura:iteration items="{!v.Contacts}" var="Contact">
-                <c:ContactTile Contact="{!Contact}" recordId="{!v.recordId}"/>
+                <c:ContactTile Contact="{!Contact}" />
             </aura:iteration>
 
             <aura:set attribute="else">
