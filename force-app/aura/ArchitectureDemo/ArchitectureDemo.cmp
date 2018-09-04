@@ -1,0 +1,23 @@
+<aura:component description="Architecture Demo" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <lightning:card iconName="custom:custom9" title="Lightning Component Architecture Demo" >
+        <lightning:layout>
+            <lightning:layoutitem class="slds-p-around_medium">
+            <div>
+                <p>
+                    We have placed the Proton Text lightning component into its own tab to the left. 
+                    The component is context aware of the recordId, so it displays conversations
+                    that have been linked to this Opportunity.
+                </p><br/>
+                <p>
+                    If you start a new conversation from this page, after selecting a recipient, this
+                    Opportunity record will automatically be linked to the conversations. (You can cancel 
+                    the link if you don't want it related.)
+                </p>
+                
+            </div>
+        	</lightning:layoutitem>
+        </lightning:layout>
+
+    </lightning:card>
+
+</aura:component>
