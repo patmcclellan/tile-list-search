@@ -6,7 +6,7 @@
 
     onSearchKeyChange : function(component, event, helper)
     {
-        console.log("🐝 searchKey: " + event.getParam("searchKey"));
+        console.log("🐝 onSearchKeyChange: " + event.getParam("searchKey"));
         helper.searchContactsByKey(component, event, helper);
     },
 })

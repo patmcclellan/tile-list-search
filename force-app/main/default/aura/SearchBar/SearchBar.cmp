@@ -8,13 +8,13 @@
 
     <aura:registerEvent name="SearchKeyChange" type="c:SearchKeyChange"/>
 
-<div class="search-entry">
-    <div class="slds-form-element slds-p_small">
-        <input type="text"
-               class="slds-input"
-               placeholder="Search name or account"
-               onkeyup="{!c.searchKeyChange}"
-               autofocus="true"/>
+    <div class="search-entry">
+        <div class="slds-form-element slds-p_small">
+            <input type="text"
+                class="slds-input"
+                placeholder="Search name or account"
+                onkeyup="{!c.searchKeyChange}"
+                autofocus="true"/>
+        </div>
     </div>
-</div>
 </aura:component>
