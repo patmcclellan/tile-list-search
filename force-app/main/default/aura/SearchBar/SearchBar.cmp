@@ -12,7 +12,7 @@
     <div class="slds-form-element slds-p_small">
         <input type="text"
                class="slds-input"
-               placeholder="Search Contacts/Leads/Users by name"
+               placeholder="Search name or account"
                onkeyup="{!c.searchKeyChange}"
                autofocus="true"/>
     </div>
