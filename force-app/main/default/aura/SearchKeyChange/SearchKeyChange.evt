@@ -1,5 +1,5 @@
 <!-- Created by pmcclellan on 09/04/18.    -->
 
-<aura:event type="APPLICATION" description="SearchKeyChange">
+<aura:event type="COMPONENT" description="SearchKeyChange">
     <aura:attribute name="searchKey" type="String"/>
 </aura:event>
