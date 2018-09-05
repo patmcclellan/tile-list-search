@@ -26,7 +26,6 @@
     searchContactsByKey : function(component, event, helper)
     {
         var searchKey = event.getParam("searchKey");
-        console.log("searchKey: " + searchKey);
         var findContactsByKey = component.get("c.findContactsByKey");
         findContactsByKey.setStorable();
         findContactsByKey.setParams({
