@@ -2,11 +2,11 @@
     <aura:attribute name="recordId" type="String"/>
 
     <lightning:card iconName="custom:custom9" title="Lightning Component Architecture Demo" >
-        <lightning:layout>
+        <!-- <lightning:layout>
             <lightning:layoutitem class="slds-p-around_medium">
                     <c:SearchBar />
         	</lightning:layoutitem>
-        </lightning:layout>
+        </lightning:layout> -->
         <lightning:layout>
             <lightning:layoutitem class="slds-p-around_medium">
                     <c:ContactList recordId="{!v.recordId}"/>
