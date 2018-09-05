@@ -4,7 +4,7 @@
 ({
 
     searchKeyChange: function(component, event, helper) {
-        var myEvent = $A.get("e.c:SearchKeyChange");
+        var myEvent = component.getEvent("SearchKeyChange");
         myEvent.setParams({"searchKey": event.target.value});
         myEvent.fire();
         console.log("🔥 fired SearchKeyChange: " + JSON.stringify(myEvent.getParams("searchKey")));
