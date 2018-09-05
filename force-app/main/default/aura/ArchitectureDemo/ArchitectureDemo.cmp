@@ -1,8 +1,10 @@
 <aura:component description="Architecture Demo" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="recordId" type="String"/>
+
     <lightning:card iconName="custom:custom9" title="Lightning Component Architecture Demo" >
         <lightning:layout>
             <lightning:layoutitem class="slds-p-around_medium">
-                    <c:SearchBar recordId="{!v.recordId}"/>
+                    <c:SearchBar />
         	</lightning:layoutitem>
         </lightning:layout>
         <lightning:layout>
@@ -12,5 +14,4 @@
         </lightning:layout>
 
     </lightning:card>
-
 </aura:component>
