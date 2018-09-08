@@ -9,7 +9,7 @@
             "searchKey": event.target.value
         });
         myEvent.fire();
-        console.log("🔥 fired SearchKeyChange: " + JSON.stringify(myEvent.getParams("searchKey")));
+        // console.log("🔥 fired SearchKeyChange: " + JSON.stringify(myEvent.getParams("searchKey")));
     }
 
     //more code here
