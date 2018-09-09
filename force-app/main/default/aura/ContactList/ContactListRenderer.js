@@ -1,5 +1,5 @@
 ({
-    afterRender : function( component, event, helper ) 
+    afterRender : function( component, helper ) 
     {
         console.log('👠👖👚');
         this.superAfterRender();
@@ -20,7 +20,7 @@
                     if(div.scrollTop >= (div.scrollHeight - div.offsetHeight)){
                         if(! component.get("v.searching"))
                         { 
-                            helper.findAllContacts(component, event, helper);
+                            helper.findAllContacts(component, helper);
                         }else console.log('searching');
                     }else console.log('div.scrollTop: ' + div.scrollTop + ' | ' +'div.scrollHeight: ' + div.scrollHeight + ' | ' + "div.offsetHeight: " + div.offsetHeight);
                 }
