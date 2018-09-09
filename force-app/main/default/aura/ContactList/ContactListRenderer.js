@@ -17,7 +17,7 @@
                 if(didScrolled){
                     console.log("didScrolled");
                     didScrolled = false;
-                    if(div.scrollTop === (div.scrollHeight - div.offsetHeight)){
+                    if(div.scrollTop >= (div.scrollHeight - div.offsetHeight)){
                         if(! component.get("v.searching"))
                         { 
                             helper.findAllContacts(component, event, helper);
