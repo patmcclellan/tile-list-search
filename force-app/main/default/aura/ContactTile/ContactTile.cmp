@@ -13,11 +13,37 @@
         <aura:set attribute="media">
             <lightning:icon iconName="standard:contact"/>
         </aura:set>
-        <dl class="slds-dl_horizontal detail">
+        <dl class="slds-dl_horizontal">
+            <dt class="slds-dl_horizontal__label">
+                <p class="slds-truncate" title="Company">Title:</p>
+            </dt>
+            <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                <p class="slds-truncate" title="Title">{!v.Contact.Title}</p>
+            </dd>
+            <dt class="slds-dl_horizontal__label">
+                <p class="slds-truncate" title="Company">Company:</p>
+            </dt>
+            <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                <p class="slds-truncate" title="Company Name">{!v.Contact.Account.Name}</p>
+            </dd>
+            <dt class="slds-dl_horizontal__label">
+                <p class="slds-truncate" title="Email">Email:</p>
+            </dt>
+            <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                <p class="slds-truncate" title="Email">{!v.Contact.Email}</p>
+            </dd>
+            <dt class="slds-dl_horizontal__label">
+                <p class="slds-truncate" title="Phone">Phone:</p>
+            </dt>
+            <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                <p class="slds-truncate" title="Phone">{!v.Contact.Phone}</p>
+            </dd>
+        </dl>
+        <!-- <dl class="slds-dl_horizontal detail">
             <dd class="slds-dl_horizontal__detail slds-tile__meta " >
                 <p class="truncate" title="Title">{!v.Contact.Title} • {!v.Contact.Account.Name}</p>
             </dd>
-        </dl>
+        </dl> -->
     </lightning:tile>
 
     </span>
