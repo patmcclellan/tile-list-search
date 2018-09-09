@@ -42,7 +42,7 @@
                 <lightning:spinner aura:id="spinner" alternativeText="Loading" size="medium" variant="brand"  />
             </div>
             <div>
-                Showing {!v.Contacts.length} of {!v.totalContacts} Contacts
+                {!v.Contacts.length} of {!v.totalContacts} Contacts
             </div>
     </footer>
 </aura:component>
