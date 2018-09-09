@@ -41,7 +41,7 @@ public with sharing class ContactListController {
                 FROM Contact
                 WHERE name LIKE :name OR Account.Name LIKE :name
                 ORDER BY LastName ASC
-                LIMIT 50];
+                LIMIT 30];
         }
         return null;
     }
