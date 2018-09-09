@@ -3,7 +3,6 @@
     border-top: solid 1px lightgray;
     overflow:scroll;
     height: 500px;
-    max-width: 350px;
     overscroll-behavior: contain;
 }
 
@@ -14,7 +13,6 @@
 }
 
 .THIS.searchBar{
-    width: 350px;
     margin-right: 50px;
     margin-bottom: 20px;
 }
