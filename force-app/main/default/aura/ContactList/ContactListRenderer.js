@@ -22,7 +22,7 @@
                         { 
                             helper.findAllContacts(component, event, helper);
                         }else console.log('searching');
-                    }else console.log('div.scrollHeight: ' + div.scrollHeight + ' | ' + "div.offsetHeight: " + div.offsetHeight);
+                    }else console.log('div.scrollTop: ' + div.scrollTop + ' | ' +'div.scrollHeight: ' + div.scrollHeight + ' | ' + "div.offsetHeight: " + div.offsetHeight);
                 }
             }), 750);
             component.set('v.intervalId', intervalId);
