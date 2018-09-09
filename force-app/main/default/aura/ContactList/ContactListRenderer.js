@@ -1,5 +1,5 @@
 ({
-    afterRender : function( component, helper ) 
+    afterRender : function( component, event, helper ) 
     {
         console.log('👠👖👚');
         this.superAfterRender();
