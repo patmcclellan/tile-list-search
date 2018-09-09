@@ -20,10 +20,10 @@
                     if (response.getReturnValue().length > 0)
                     {
                         console.log("🍊 returned contacts: " + response.getReturnValue().length);
-                        var contacts = component.get("v.Contacts");
+                        var Contacts = component.get("v.Contacts");
                         var newContacts = response.getReturnValue();
-                        contacts.concat(newContacts);
-                        component.set("v.Contacts", contacts);
+                        Contacts.concat(newContacts);
+                        component.set("v.Contacts", Contacts);
                         component.set("v.hasContact", true);
                         console.log('🥦  ' + JSON.stringify(response.getReturnValue()));
                         console.log('🌶  ' + JSON.stringify(component.get("v.Contacts")));
