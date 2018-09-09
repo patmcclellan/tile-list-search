@@ -32,6 +32,10 @@
                         offsetI += 50;
                         component.set('v.offset', offsetI.toString());
                         
+                        var apple = ["delicious", "granny smith"];
+                        var pear = ["crisp", "bosch"];
+                        console.log(apple.concat(pear));
+
                         //make a clone of the contacts list for fast rebound after a search
                         component.set("v.AllContactsSoFar", component.get("v.Contacts").slice(0));
                     }else component.set("v.hasContact",false);
