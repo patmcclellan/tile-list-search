@@ -21,5 +21,7 @@
 }
 
 .THIS .flush-right {
-   text-align: right;
+    width: 80px;
+    text-align: right;
+
 }
