@@ -13,20 +13,15 @@
 }
 
 .THIS.searchBar{
-    width: 300px;
-    float: right;
+    width: 300px
     margin-top: -40px;
     margin-right: 50px;
     margin-bottom: 20px;
 }
 
 .THIS.exampleHolder{
-    margin-top: 20px;
+    margin-top: -40px;
     display: inline-block;
     width: 80px;
     height: 80px;
-}
-
-.THIS.status{
-    text-align: left;
 }
