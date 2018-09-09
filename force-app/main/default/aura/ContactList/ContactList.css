@@ -1,6 +1,6 @@
 .THIS.scrollerSize {
-    width: 100%;
     margin-top: 20px;
+    margin-bottom: -20px;
     border-top: solid 1px lightgray;
     overflow:scroll;
     height: 500px;
