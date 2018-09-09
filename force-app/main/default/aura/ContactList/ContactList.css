@@ -10,7 +10,7 @@
     padding-top: 20px;
 }
 
-.THIS .searchBar{
+.THIS.searchBar{
     width: 300px;
     float: right;
     margin-top: -40px;
