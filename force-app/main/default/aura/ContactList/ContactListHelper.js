@@ -32,7 +32,7 @@
                         offsetI += 50;
                         component.set('v.offset', offsetI.toString());
                         
-                        var apple = ["delicious", "granny smith"];
+                        var apple = [];
                         var pear = ["crisp", "bosch"];
                         console.log(apple.concat(pear));
 
