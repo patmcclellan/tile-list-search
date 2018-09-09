@@ -21,7 +21,7 @@
                     {
                         console.log("🍊 returned contacts: " + response.getReturnValue().length);
                         var contacts = component.get("v.Contacts");
-                        contacts.push(response.getReturnValue());
+                        contacts.concat(response.getReturnValue());
                         component.set("v.Contacts", contacts);
                         component.set("v.hasContact", true);
                         console.log('🥦  ' + JSON.stringify(response.getReturnValue()));
