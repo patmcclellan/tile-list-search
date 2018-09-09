@@ -22,7 +22,7 @@
         <c:SearchBar/>
     </div>
 
-    <ui:scrollerWrapper class="scroller">
+    <div aura:id="scroll_container" class="scrollerSize">
         <aura:if isTrue="{!v.hasContact}">
 
             <aura:iteration items="{!v.Contacts}" var="Contact">
@@ -36,7 +36,7 @@
             </aura:set>
 
         </aura:if>
-    </ui:scrollerWrapper>
+    </div>
     <footer class="slds-card__footer">
         <div class="slds-text-title_caps">
             Showing {!v.Contacts.length} of {!v.totalContacts} Contacts
