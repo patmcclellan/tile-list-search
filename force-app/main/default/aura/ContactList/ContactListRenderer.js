@@ -15,6 +15,7 @@
             //Interval function to check if the user scrolled or if there is a scrollbar
             var intervalId = setInterval($A.getCallback(function(){
                 if(didScrolled){
+                    console.log("didScrolled");
                     didScrolled = false;
                     if(div.scrollTop === (div.scrollHeight - div.offsetHeight)){
                         if(! component.get("v.searching"))
