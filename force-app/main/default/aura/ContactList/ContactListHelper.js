@@ -61,11 +61,9 @@
     searchContactsByKey : function(component, event, helper)
     {
         var searchKey = event.getParam("searchKey");
-        console.log ("searchKey: " + searchKey);
         if(searchKey.trim() == '') // search is empty, return to previous list
         {
-            console.log("searchKey is empty");
-            component.set("v.Contact", component.get("v.AllContactsSoFar").slice(0));
+            component.set("v.Contacts", component.get("v.AllContactsSoFar").slice(0));
         }else 
         {
             var findContactsByKey = component.get("c.findContactsByKey");
