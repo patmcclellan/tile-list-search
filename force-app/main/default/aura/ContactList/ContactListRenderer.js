@@ -21,7 +21,7 @@
                         if(! component.get("v.searching"))
                         { 
                             helper.findAllContacts(component, event, helper);
-                        }
+                        }else console.log('searching');
                     }
                 }
             }), 750);
