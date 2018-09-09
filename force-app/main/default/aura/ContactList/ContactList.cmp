@@ -9,11 +9,17 @@
     <aura:attribute name="Contacts" type="Contact[]"/>
     <aura:attribute name="hasContact" type="Boolean" default="true"/>
     <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="intervalId" type="Object" />
+    <aura:attribute name="offset" type="String" default="0"/>
+    <aura:attribute name="totalContacts" type="Integer" default="0"/>
+    <aura:attribute name="searching" type="Boolean" default="false"/>
 
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:handler name="SearchKeyChange" event="c:SearchKeyChange" action="{!c.onSearchKeyChange}"/>
 
-    <c:SearchBar />
+    <div class="searchBar" >
+        <c:SearchBar/>
+    </div>
 
     <ui:scrollerWrapper class="scroller">
         <aura:if isTrue="{!v.hasContact}">
@@ -30,5 +36,12 @@
 
         </aura:if>
     </ui:scrollerWrapper>
-
+    <footer class="slds-card__footer">
+        <div class="slds-text-title_caps">
+            Showing {!v.Contacts.length} of {!v.totalContacts} Contacts with Payments.
+        </div>
+        <div class="exampleHolder">
+            <lightning:spinner aura:id="spinner" alternativeText="Loading" size="medium" />
+        </div>
+    </footer>
 </aura:component>
