@@ -38,11 +38,15 @@
         </aura:if>
     </div>
     <footer class="slds-card__footer">
-        <div class="slds-text-title_caps" >
-            Showing {!v.Contacts.length} of {!v.totalContacts} Contacts
-        </div>
-        <div class="exampleHolder" style="position:relative">
-            <lightning:spinner aura:id="spinner" alternativeText="Loading" size="medium" />
-        </div>
+        <aura:if isTrue="{v.searching}">
+            <div class="exampleHolder" style="position:relative">
+                <lightning:spinner aura:id="spinner" alternativeText="Loading" size="medium" />
+            </div>
+        <aura:set attribute="else">
+            <div class="slds-text-title_caps" >
+                Showing {!v.Contacts.length} of {!v.totalContacts} Contacts
+            </div>
+        </aura:set>
+        </aura:if>
     </footer>
 </aura:component>
