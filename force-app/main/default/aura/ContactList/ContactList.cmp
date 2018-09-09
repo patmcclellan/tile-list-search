@@ -38,7 +38,7 @@
         </aura:if>
     </div>
     <footer class="slds-card__footer">
-            <div class="exampleHolder">
+            <div class="exampleHolder" style="position:relative; margin-top:-100px">
                 <lightning:spinner aura:id="spinner" alternativeText="Loading" size="medium" variant="brand"  />
             </div>
             <div>
