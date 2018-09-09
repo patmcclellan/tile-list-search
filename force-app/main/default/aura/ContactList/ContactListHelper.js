@@ -1,6 +1,7 @@
 ({
     findAllContacts : function(component, event, helper)
     {
+        console.log("😛 findAllContacts");
         if (component.get("v.totalContacts")>=parseInt(component.get("v.offset")))
         {
             var spinner = component.find("spinner");
