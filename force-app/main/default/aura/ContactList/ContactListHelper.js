@@ -46,7 +46,7 @@
             var state = response.getState();
             if(component.isValid() && state === "SUCCESS"){
                 component.set("v.totalContacts", response.getReturnValue());
-                // console.log("Total: " + component.get("v.totalContacts"));
+                console.log("Total: " + component.get("v.totalContacts"));
             } else if (state === "ERROR") {
                 var errors = response.getError();
                 console.error(errors);
