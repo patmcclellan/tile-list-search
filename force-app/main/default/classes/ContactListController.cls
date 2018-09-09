@@ -31,6 +31,21 @@ public with sharing class ContactListController {
         return null;
     }
 
+    //used by ContactList.cmp
+    @AuraEnabled
+    public static List<Contact> findContactsByKey(String searchKey) {
+        String name = '%' + searchKey + '%';
+        if (Contact.SObjectType.getDescribe().isAccessible()) {
+            return [
+                SELECT id, Name, Title, Account.Name, Phone, Email
+                FROM Contact
+                WHERE name LIKE :name OR Account.Name LIKE :name
+                ORDER BY LastName ASC
+                LIMIT 50];
+        }
+        return null;
+    }
+
     
 
 
@@ -57,21 +72,6 @@ public with sharing class ContactListController {
                 WHERE AccountId = :recordId
                 ORDER BY LastName ASC
             ];
-        }
-        return null;
-    }
-
-    //used by ContactList.cmp
-    @AuraEnabled
-    public static List<Contact> findContactsByKey(String searchKey) {
-        String name = '%' + searchKey + '%';
-        if (Contact.SObjectType.getDescribe().isAccessible()) {
-            return [
-                SELECT id, Name, Title, Account.Name, Phone, Email
-                FROM Contact
-                WHERE name LIKE :name OR Account.Name LIKE :name
-                ORDER BY LastName ASC
-                LIMIT 10];
         }
         return null;
     }
