@@ -38,10 +38,10 @@
         </aura:if>
     </div>
     <footer class="slds-card__footer">
-            <div class="exampleHolder" >
+            <div class="exampleHolder">
                 <lightning:spinner aura:id="spinner" alternativeText="Loading" size="medium" variant="brand"  />
             </div>
-            <div >
+            <div>
                 Showing {!v.Contacts.length} of {!v.totalContacts} Contacts
             </div>
     </footer>
