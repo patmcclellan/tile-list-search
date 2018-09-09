@@ -1,6 +1,7 @@
 ({
     afterRender : function( component, helper ) 
     {
+        console.log('👠👖👚');
         this.superAfterRender();
         var didScrolled;
         var div = component.find('scroll_container');
