@@ -20,12 +20,11 @@
                     if (response.getReturnValue().length > 0)
                     {
                         console.log("🍊 returned contacts: " + response.getReturnValue().length);
-                        var newContacts = response.getReturnValue();
                         var contacts = component.get("v.Contacts");
-                        contacts.push(newContacts);
+                        contacts.push(response.getReturnValue());
                         component.set("v.Contacts", contacts);
                         component.set("v.hasContact", true);
-                        console.log(JSON.stringify(component.get("v.Contacts")));
+                        console.log('🌶  ' + JSON.stringify(component.get("v.Contacts")));
                         $A.util.toggleClass(spinner, "slds-hide");
                         var offsetI = parseInt(offset);
                         offsetI += 50;
