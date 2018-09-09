@@ -18,12 +18,11 @@ public with sharing class ContactListController {
         return null;
     }
 
-    private static Map<Id,Contact> getConListNoRecordId(String offset)
+    private static List<Contact> getConListNoRecordId(String offset)
     {
         integer offsetI = integer.valueOf(offset);
         return [SELECT Id, Name, Title, Account.Name, Phone, Email
                 FROM Contact
-                WHERE Payments__c > 0.00
                 ORDER by LastName
                 LIMIT 50 
                 OFFSET :offsetI];
