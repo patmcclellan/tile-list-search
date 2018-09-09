@@ -36,7 +36,7 @@
                 <p class="slds-truncate flush-right" title="Phone">Phone:</p>
             </dt>
             <dd class="slds-dl_horizontal__detail slds-tile__meta">
-                <p class="slds-truncate flush-right" title="Phone">{!v.Contact.Phone}</p>
+                <p class="slds-truncate" title="Phone">{!v.Contact.Phone}</p>
             </dd>
         </dl>
         <!-- <dl class="slds-dl_horizontal detail">
