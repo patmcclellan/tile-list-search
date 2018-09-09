@@ -19,6 +19,7 @@
                 {
                     if (response.getReturnValue().length > 0)
                     {
+                        console.log("🍊 returned contacts: " + response.getReturnValue().length);
                         var newContacts = response.getReturnValue();
                         var contacts = component.get("v.Contacts");
                         contacts.push(newContacts);

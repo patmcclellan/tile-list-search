@@ -1,7 +1,7 @@
 ({
     doInit : function(component, event, helper)
     {
-        helper.getTotalContacts(cmp,event,helper);
+        helper.getTotalContacts(component,event,helper);
         helper.findAllContacts(component, event, helper);
     },
 
@@ -11,3 +11,4 @@
         helper.searchContactsByKey(component, event, helper);
     },
 })
+
