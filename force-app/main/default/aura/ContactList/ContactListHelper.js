@@ -20,7 +20,7 @@
                     if (response.getReturnValue().length > 0)
                     {
                         var newContacts = response.getReturnValue();
-                        var contacts = component.get("v.Contact");
+                        var contacts = component.get("v.Contacts");
                         contacts.push(newContacts);
                         component.set("v.Contacts", contacts);
                         component.set("v.hasContact", true);
