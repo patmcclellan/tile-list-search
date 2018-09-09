@@ -26,10 +26,12 @@
                         console.log('😸 ' + Contacts.concat(apple));
 
                         var newContacts = response.getReturnValue();
-                        Contacts.concat(newContacts);
+                        console.log('🥦  ' + JSON.stringify(newContacts));
+
+                        Contacts = Contacts.concat(newContacts);
+                        console.log('🌶  ' + JSON.stringify(component.get("v.Contacts")));
                         component.set("v.Contacts", Contacts);
                         component.set("v.hasContact", true);
-                        console.log('🥦  ' + JSON.stringify(response.getReturnValue()));
                         $A.util.toggleClass(spinner, "slds-hide");
                         var offsetI = parseInt(offset);
                         offsetI += 50;
