@@ -60,30 +60,33 @@
 
     searchContactsByKey : function(component, event, helper)
     {
-        
-        
-
         var searchKey = event.getParam("searchKey");
-        var findContactsByKey = component.get("c.findContactsByKey");
-        findContactsByKey.setStorable();
-        findContactsByKey.setParams({
-            "searchKey": searchKey
-        });
-        findContactsByKey.setCallback(this, function(response){
-            var state = response.getState();
-            if(component.isValid() && state === "SUCCESS")
-            {
-                var Contacts = response.getReturnValue();
-                component.set("v.Contacts", Contacts);
-                if (Contacts.length > 0)
+        if(!searchKey) // search is empty, return to previous list
+        {
+            component.set("v.Contact", component.get("v.AllContactsSoFar").slice(0));
+        }else 
+        {
+            var findContactsByKey = component.get("c.findContactsByKey");
+            findContactsByKey.setStorable();
+            findContactsByKey.setParams({
+                "searchKey": searchKey
+            });
+            findContactsByKey.setCallback(this, function(response){
+                var state = response.getState();
+                if(component.isValid() && state === "SUCCESS")
                 {
-                    component.set("v.hasContact", true);
-                }else
-                {
-                    component.set("v.hasContact", false);
+                    var Contacts = response.getReturnValue();
+                    component.set("v.Contacts", Contacts);
+                    if (Contacts.length > 0)
+                    {
+                        component.set("v.hasContact", true);
+                    }else
+                    {
+                        component.set("v.hasContact", false);
+                    }
                 }
-            }
-        });
-        $A.enqueueAction(findContactsByKey);
+            });
+            $A.enqueueAction(findContactsByKey);
+        }
     },
 })
