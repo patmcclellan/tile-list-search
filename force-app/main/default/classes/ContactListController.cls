@@ -17,6 +17,24 @@ public with sharing class ContactListController {
         }
         return null;
     }
+    
+    @AuraEnabled
+    public static Integer getContactsCount(String recordId) 
+    {
+        if (recordId == null) 
+        {
+            return [SELECT Count() FROM Contact ];
+        } else if (recordId.Left(3) == Schema.SObjectType.Account.getKeyPrefix()) //it's an Account record
+        {  
+            return [SELECT Count() FROM Contact WHERE AccountId =: recordId];
+        }
+        return null;
+    }
+
+    
+
+
+/*-------------------------------------------------------------------------------------*/
 
     private static List<Contact> getConListNoRecordId(String offset)
     {
