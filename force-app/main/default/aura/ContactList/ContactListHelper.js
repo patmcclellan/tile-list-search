@@ -20,17 +20,7 @@
                     if (response.getReturnValue().length > 0)
                     {
                         console.log("🍊 returned contacts: " + response.getReturnValue().length);
-                        var Contacts = component.get("v.Contacts");
-                        console.log('🌶  ' + JSON.stringify(component.get("v.Contacts")));
-                        var apple = ['granny smith', 'red delicious'];
-                        console.log('😸 ' + Contacts.concat(apple));
-
-                        var newContacts = response.getReturnValue();
-                        console.log('🥦  ' + JSON.stringify(newContacts));
-
-                        Contacts = Contacts.concat(newContacts);
-                        console.log('🌶  ' + JSON.stringify(component.get("v.Contacts")));
-                        component.set("v.Contacts", Contacts);
+                        component.set("v.Contacts", component.get("v.Contacts").concat(response.getReturnValue()));
                         component.set("v.hasContact", true);
                         $A.util.toggleClass(spinner, "slds-hide");
                         var offsetI = parseInt(offset);
