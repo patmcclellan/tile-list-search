@@ -14,6 +14,7 @@
                 };
             //Interval function to check if the user scrolled or if there is a scrollbar
             var intervalId = setInterval($A.getCallback(function(){
+                console.log('checking');
                 if(didScrolled){
                     didScrolled = false;
                     if(div.scrollTop === (div.scrollHeight - div.offsetHeight)){
