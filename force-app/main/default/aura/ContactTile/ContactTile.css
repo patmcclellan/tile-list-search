@@ -14,9 +14,12 @@
 }
 
 .THIS .truncate {
-
    width: 300px;
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
-   }
+}
+
+.THIS .flush-right {
+   text-align: right;
+}

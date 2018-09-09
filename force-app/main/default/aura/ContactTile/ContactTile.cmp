@@ -15,28 +15,28 @@
         </aura:set>
         <dl class="slds-dl_horizontal">
             <dt class="slds-dl_horizontal__label">
-                <p class="slds-truncate" title="Company">Title:</p>
+                <p class="slds-truncate flush-right" title="Company">Title:</p>
             </dt>
             <dd class="slds-dl_horizontal__detail slds-tile__meta">
                 <p class="slds-truncate" title="Title">{!v.Contact.Title}</p>
             </dd>
             <dt class="slds-dl_horizontal__label">
-                <p class="slds-truncate" title="Company">Company:</p>
+                <p class="slds-truncate flush-right" title="Company">Company:</p>
             </dt>
             <dd class="slds-dl_horizontal__detail slds-tile__meta">
                 <p class="slds-truncate" title="Company Name">{!v.Contact.Account.Name}</p>
             </dd>
             <dt class="slds-dl_horizontal__label">
-                <p class="slds-truncate" title="Email">Email:</p>
+                <p class="slds-truncate flush-right" title="Email">Email:</p>
             </dt>
             <dd class="slds-dl_horizontal__detail slds-tile__meta">
                 <p class="slds-truncate" title="Email"><a href="{! 'mailto:' + v.Contact.Email}">{!v.Contact.Email}</a></p>
             </dd>
             <dt class="slds-dl_horizontal__label">
-                <p class="slds-truncate" title="Phone">Phone:</p>
+                <p class="slds-truncate flush-right" title="Phone">Phone:</p>
             </dt>
             <dd class="slds-dl_horizontal__detail slds-tile__meta">
-                <p class="slds-truncate" title="Phone">{!v.Contact.Phone}</p>
+                <p class="slds-truncate flush-right" title="Phone">{!v.Contact.Phone}</p>
             </dd>
         </dl>
         <!-- <dl class="slds-dl_horizontal detail">
