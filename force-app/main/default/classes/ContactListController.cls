@@ -57,7 +57,7 @@ public with sharing class ContactListController {
         return [SELECT Id, Name, Title, Account.Name, Phone, Email
                 FROM Contact
                 ORDER by LastName
-                LIMIT 50 
+                LIMIT 100 
                 OFFSET :offsetI];
     }
 

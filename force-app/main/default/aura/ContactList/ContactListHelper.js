@@ -25,7 +25,7 @@
                         component.set("v.hasContact", true);
                         $A.util.toggleClass(spinner, "slds-hide");
                         var offsetI = parseInt(offset);
-                        offsetI += 50;
+                        offsetI += 100;
                         component.set('v.offset', offsetI.toString());
 
                         //make a clone of the contacts list for fast rebound after a search
