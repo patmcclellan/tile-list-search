@@ -30,6 +30,9 @@
                         var offsetI = parseInt(offset);
                         offsetI += 50;
                         component.set('v.offset', offsetI.toString());
+                        
+                        //make a clone of the contacts list for fast rebound after a search
+                        component.set("v.AllContactsSoFar", component.get("v.Contacts").slice(0));
                     }else component.set("v.hasContact",false);
                 }
             });
@@ -61,8 +64,7 @@
     searchContactsByKey : function(component, event, helper)
     {
         
-        //make a clone of the contacts list for fast rebound after a search
-        component.set("v.AllContactsSoFar", component.get("v.Contacts").slice(0));
+        
 
         var searchKey = event.getParam("searchKey");
         var findContactsByKey = component.get("c.findContactsByKey");
