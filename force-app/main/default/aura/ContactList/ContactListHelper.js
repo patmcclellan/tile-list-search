@@ -24,6 +24,7 @@
                         contacts.push(response.getReturnValue());
                         component.set("v.Contacts", contacts);
                         component.set("v.hasContact", true);
+                        console.log('🥦  ' + JSON.stringify(response.getReturnValue()));
                         console.log('🌶  ' + JSON.stringify(component.get("v.Contacts")));
                         $A.util.toggleClass(spinner, "slds-hide");
                         var offsetI = parseInt(offset);
