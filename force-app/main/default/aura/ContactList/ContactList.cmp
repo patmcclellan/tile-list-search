@@ -39,7 +39,7 @@
     </ui:scrollerWrapper>
     <footer class="slds-card__footer">
         <div class="slds-text-title_caps">
-            Showing {!v.Contacts.length} of {!v.totalContacts} Contacts.
+            Showing {!v.Contacts.length} of {!v.totalContacts} Contacts
         </div>
         <div class="exampleHolder">
             <lightning:spinner aura:id="spinner" alternativeText="Loading" size="medium" />
