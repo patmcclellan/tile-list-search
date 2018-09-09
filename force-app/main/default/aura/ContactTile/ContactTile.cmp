@@ -30,7 +30,7 @@
                 <p class="slds-truncate" title="Email">Email:</p>
             </dt>
             <dd class="slds-dl_horizontal__detail slds-tile__meta">
-                <p class="slds-truncate" title="Email"><a href="{! mailto='v.Contact.Email'}">{!v.Contact.Email}</a></p>
+                <p class="slds-truncate" title="Email"><a href="{! mailto:v.Contact.Email}">{!v.Contact.Email}</a></p>
             </dd>
             <dt class="slds-dl_horizontal__label">
                 <p class="slds-truncate" title="Phone">Phone:</p>
