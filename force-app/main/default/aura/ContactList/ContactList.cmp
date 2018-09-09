@@ -41,7 +41,7 @@
             <div class="exampleHolder" style="position:relative">
                 <lightning:spinner aura:id="spinner" alternativeText="Loading" size="medium" variant="brand"  />
             </div>
-            <div class="slds-text-title_caps" >
+            <div class="status" >
                 Showing {!v.Contacts.length} of {!v.totalContacts} Contacts
             </div>
     </footer>
