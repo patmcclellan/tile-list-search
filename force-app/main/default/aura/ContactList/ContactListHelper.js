@@ -21,20 +21,19 @@
                     {
                         console.log("🍊 returned contacts: " + response.getReturnValue().length);
                         var Contacts = component.get("v.Contacts");
+                        console.log('🌶  ' + JSON.stringify(component.get("v.Contacts")));
+                        var apple = ['granny smith', 'red delicious'];
+                        console.log('😸 ' + Contacts.concat(apple));
+
                         var newContacts = response.getReturnValue();
                         Contacts.concat(newContacts);
                         component.set("v.Contacts", Contacts);
                         component.set("v.hasContact", true);
                         console.log('🥦  ' + JSON.stringify(response.getReturnValue()));
-                        console.log('🌶  ' + JSON.stringify(component.get("v.Contacts")));
                         $A.util.toggleClass(spinner, "slds-hide");
                         var offsetI = parseInt(offset);
                         offsetI += 50;
                         component.set('v.offset', offsetI.toString());
-                        
-                        var apple = [];
-                        var pear = ["crisp", "bosch"];
-                        console.log(apple.concat(pear));
 
                         //make a clone of the contacts list for fast rebound after a search
                         component.set("v.AllContactsSoFar", component.get("v.Contacts").slice(0));
