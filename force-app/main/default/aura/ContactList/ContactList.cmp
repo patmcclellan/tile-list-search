@@ -7,6 +7,7 @@
     controller="ContactListController">
 
     <aura:attribute name="Contacts" type="Contact[]"/>
+    <aura:attribute name="AllContactsSoFar" type="Contact[]"/>
     <aura:attribute name="hasContact" type="Boolean" default="true"/>
     <aura:attribute name="recordId" type="String"/>
     <aura:attribute name="intervalId" type="Object" />
