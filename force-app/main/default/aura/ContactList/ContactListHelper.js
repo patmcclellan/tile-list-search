@@ -1,6 +1,8 @@
 ({
     findAllContacts : function(component, event, helper)
     {
+        var recordId = component.get("v.recordId");
+        if(!recordId) recordId = '';
         if (component.get("v.totalContacts")>=parseInt(component.get("v.offset")))
         { 
             console.log("😛 getting contacts from the server");
