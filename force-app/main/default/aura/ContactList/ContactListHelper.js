@@ -65,7 +65,7 @@
         var searchKey = event.getParam("searchKey");
         if(searchKey.trim() == '') // search is empty, return to previous list
         {
-            component.set("v.searchDisplay", false);
+            component.set("v.searching", false);
             Object.assign(component.get("v.Contacts", component.get("v.AllContactsSoFar")));
         }else 
         {
@@ -84,13 +84,13 @@
                     {
                         console.log('🔎 Found contacts: ' + Contacts.length);
                         component.set("v.hasContact", true);
-                        component.set("v.searchDisplay", true);
                     }else
                     {
                         component.set("v.hasContact", false);
                     }
                 }
             });
+            component.set("v.searching", true);
             $A.enqueueAction(findContactsByKey);
         } 
 
