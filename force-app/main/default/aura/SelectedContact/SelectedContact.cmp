@@ -19,7 +19,7 @@
                     <p class="slds-truncate flush-right" title="Name">Name:</p>
                 </dt>
                 <dd class="slds-dl_horizontal__detail slds-tile__meta">
-                    <p class="slds-text-title" title="Name">{!v.Contact.Name}</p>
+                    <p class="slds-text-heading_small" title="Name">{!v.Contact.Name}</p>
                 </dd>
                 <dt class="slds-dl_horizontal__label">
                     <p class="slds-truncate flush-right" title="Title">Title:</p>
