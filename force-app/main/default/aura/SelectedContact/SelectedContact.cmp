@@ -1,7 +1,7 @@
 <aura:component description="Selected Contact" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
     <aura:attribute name="Contact" type="Object"/>
     <aura:attribute name="hasContact" type="Boolean" default="false"/>
-    <aura:attribute name="cardTitle" type="String" default="Selected Contact"
+    <aura:attribute name="cardTitle" type="String" default="Selected Contact"/>
     
     <aura:handler event="c:SelectContact" action="{!c.onSelectContact}"/>
 
