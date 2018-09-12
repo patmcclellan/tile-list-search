@@ -16,7 +16,13 @@
             <div class="slds-p-around_medium">
             <dl class="slds-dl_horizontal">
                 <dt class="slds-dl_horizontal__label">
-                    <p class="slds-truncate flush-right" title="Company">Title:</p>
+                    <p class="slds-truncate flush-right" title="Name">Name:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-text-title" title="Name">{!v.Contact.Name}</p>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                    <p class="slds-truncate flush-right" title="Title">Title:</p>
                 </dt>
                 <dd class="slds-dl_horizontal__detail slds-tile__meta">
                     <p class="slds-truncate" title="Title">{!v.Contact.Title}</p>
