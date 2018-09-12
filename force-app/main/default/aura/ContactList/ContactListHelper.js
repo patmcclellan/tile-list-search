@@ -34,7 +34,7 @@
                 }
             });
             $A.enqueueAction(findAllContacts);
-        }
+        } else
 
         console.log("🙁 no more contacts to find");
     },
