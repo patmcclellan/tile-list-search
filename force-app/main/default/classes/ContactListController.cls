@@ -35,7 +35,7 @@ public with sharing class ContactListController {
         List<Contact> Contacts = new List<Contact>();
         String name = searchKey + '%';
         if (Contact.SObjectType.getDescribe().isAccessible()) {
-            return [
+            Contacts = [
                 SELECT id, Name, Title, Account.Name, Phone, Email
                 FROM Contact
                 WHERE FirstName LIKE :name OR LastName LIKE :name OR Account.Name LIKE :name
@@ -65,7 +65,7 @@ public with sharing class ContactListController {
     {
         List<Contact> Contacts = new List<Contact>();
         if (Contact.SObjectType.getDescribe().isAccessible()) {
-            return [
+            Contacts = [
                 SELECT id, Name, Title, Account.Name, Phone, Email
                 FROM Contact
                 WHERE AccountId = :recordId
