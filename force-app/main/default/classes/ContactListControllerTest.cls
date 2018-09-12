@@ -26,7 +26,7 @@ private class ContactListControllerTest
         insert contacts;
 
         System.assertEquals(40,ContactListController.getContactsCount(''));
-        
+
         List<Contact> nullRecContacts = ContactListController.findAllContacts('0', '');
         System.assertEquals(40,nullRecContacts.size());
 
@@ -35,6 +35,7 @@ private class ContactListControllerTest
         System.assertEquals(40,allContacts.size());
 
         String recId2 = accounts[1].id;
+        System.assertEquals(4,ContactListController.getContactsCount(recId2));
         List<Contact> accountContacts = ContactListController.findAllContacts('0', recId2);
         System.assertEquals(4,accountContacts.size());
 
