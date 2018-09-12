@@ -13,6 +13,7 @@
             </span>
         </aura:set>
         <aura:if isTrue="{!v.hasContact}">
+            <div class="slds-p-around_medium">
             <dl class="slds-dl_horizontal">
                 <dt class="slds-dl_horizontal__label">
                     <p class="slds-truncate flush-right" title="Company">Title:</p>
@@ -42,6 +43,7 @@
             <aura:set attribute="else">
                 No contact selected.
             </aura:set>
+            </div>
         </aura:if>
     </lightning:card>
 
