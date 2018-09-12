@@ -14,7 +14,6 @@ public with sharing class ContactListController {
         }else {
             return getConListNoRecordId(offset);
         }
-        return null;
     }
     
     @AuraEnabled
@@ -33,6 +32,7 @@ public with sharing class ContactListController {
     //used by ContactList.cmp
     @AuraEnabled
     public static List<Contact> findContactsByKey(String searchKey) {
+        List<Contact> Contacts = new List<Contact>();
         String name = searchKey + '%';
         if (Contact.SObjectType.getDescribe().isAccessible()) {
             return [
@@ -42,7 +42,7 @@ public with sharing class ContactListController {
                 ORDER BY LastName ASC
                 LIMIT 30];
         }
-        return null;
+        return Contacts;
     }
 
     
@@ -72,6 +72,6 @@ public with sharing class ContactListController {
                 ORDER BY LastName ASC
             ];
         }
-        return null;
+        return Contacts;
     }
 }
