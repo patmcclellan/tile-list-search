@@ -15,15 +15,11 @@
             <lightning:icon iconName="standard:contact"/>
         </aura:set>
         <dl class="slds-dl_horizontal">
-            <dt class="slds-dl_horizontal__label">
-                <p class="slds-truncate flush-right" title="Company">Title:</p>
-            </dt>
+            
             <dd class="slds-dl_horizontal__detail slds-tile__meta">
                 <p class="slds-truncate" title="Title">{!v.Contact.Title}</p>
             </dd>
-            <dt class="slds-dl_horizontal__label">
-                <p class="slds-truncate flush-right" title="Company">Company:</p>
-            </dt>
+          
             <dd class="slds-dl_horizontal__detail slds-tile__meta">
                 <p class="slds-truncate" title="Company Name">{!v.Contact.Account.Name}</p>
             </dd>
