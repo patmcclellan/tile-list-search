@@ -1,66 +1,36 @@
-# SFDX Simple App
+# tile-list-search
 
-[![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://deploy-to-sfdx.com/)
+This is a demo of a common architecture pattern used in Lightning development.
 
-The Salesforce Developer Experience (SFDX) starts with source code living in your version control system.
+The outer component in this demo is called ArchitectureDemo.cmp.
+It provides the wrapper for placement of the integral components,
+as well as provided a Label and Icon.
 
-## Set Up the Salesforce DX Project
+At the top of the layout, we have the SearchBar.cmp, with a scrollable
+ContactList.cmp below. The server logic is contained in ContactList.
 
-Our first goal is to set up a developer project which we'll use to modify our application. It starts by cloning the repository. Use the command ...
+ContactList.cmp has an init handler that calls the ContactListController.cls, 
+findAllContacts() method to pull in a list of all Contacts. With Contacts populated,
+ContactList iterates each Contact with ContactTile.cmp for displaying the tiles
+in the scrollable list.
 
-    git clone https://github.com/forcedotcom/sfdx-simple.git
+To make this demo robust but responsive, ContactList uses incremental loading of records (100 per search)
+that is triggered by scrolling to the bottom of the list.
 
-… or ...
+The fastest way to find a record is to use the SearchBar. Each keystroke fires
+a component event that is received by ContactList, which handles the event with
+helper.searchContactsByKey(), which calls ContactListController.findContactsByKey(). 
+This method takes the contact key and searches for that key at the beginning of
+Contact firstName, lastName, and Account.Name, returning the result, which is 
+assigned to Contacts and displayed in the list.
 
-    git clone git@github.com:forcedotcom/sfdx-simple.git
+Cancel the search by clearing the SearchBar input and the list returns to the
+previously loaded Contacts list, without a server call. This is done by
+cloning the contacts list as it is built, then reverting to the clone when the
+search is abandoned.
 
-… to clone the repository. Then, open the directory.
-
-    cd sfdx-simple
-    
-## Steps
-
-Authorize to your Developer Hub (Dev Hub) org.
-
-    sfdx force:auth:web:login -d -a "Hub Org"
-
-If you already have an authorized Dev Hub, set it as the default:
-
-    sfdx force:config:set defaultdevhubusername=<username|alias>
-
-Create a scratch org.
-
-    sfdx force:org:create -s -f config/project-scratch-def.json
-
-If you want to use an existing scratch org, set it as the default:
-
-    sfdx force:config:set defaultusername=<username|alias>
-
-Push your source.
-
-    sfdx force:source:push
-
-Run your tests.
-
-    sfdx force:apex:test:run
-    sfdx force:apex:test:report -i <id>
-
-Open the scratch org.
-
-    sfdx force:org:open --path one/one.app
-
-## Resources
-
-For details on using sfdx-simple, please review the [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev).
-
-## Description of Files and Directories  
-
-* **sfdx-project.json**: Required by Salesforce DX. Configures your project.  Use this file to specify the parameters that affect your Salesforce development project.
-* **config/project-scratch-def.json**: Sample file that shows how to define the shape of a scratch org.  You reference this file when you create your scratch org with the force:org:create command.   
-* **force-app**: Directory that contains the source for the sample Force.com app and tests.   
-* **.project**:  Required by the Eclipse IDE.  Describes the Eclipse project. 
-* **.gitignore**:  Optional Git file. Specifies intentionally untracked files that you want Git (or in this case GitHub) to ignore.
-
-## Issues
-
-Please log issues related to this repository [here](https://github.com/forcedotcom/sfdx-simple/issues).
+Clicking anywhere on the ContactTile fire the SelectContact event, with a data
+payload of the Contact record. If we were simply passing this back up to ContactList,
+a Component event would work. In this demo, I'm using an Application event, which is
+received by a separate component on the page, SelectedContact.cmp, which simply
+displays selected fields from the record.
