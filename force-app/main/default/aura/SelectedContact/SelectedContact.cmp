@@ -22,7 +22,7 @@
                     <p class="slds-truncate flush-right" title="Name">Name:</p>
                 </dt>
                 <dd class="slds-dl_horizontal__detail slds-tile__meta">
-                    <a href="{!v.Contact.Id}" onclick="{!c.handleClick}">{!v.Contact.Name}</a>
+                    <a href="{!v.url}" onclick="{!c.handleClick}">{!v.Contact.Name}</a>
                 </dd>
                 <dt class="slds-dl_horizontal__label">
                     <p class="slds-truncate flush-right" title="Title">Title:</p>
