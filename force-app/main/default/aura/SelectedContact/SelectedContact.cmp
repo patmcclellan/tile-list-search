@@ -4,6 +4,7 @@
     
     <aura:handler event="c:SelectContact" action="{!c.onSelectContact}"/>
 
+    
     <lightning:card title="{!v.Contact.Name">
         <dl class="slds-dl_horizontal">
             <dt class="slds-dl_horizontal__label">
