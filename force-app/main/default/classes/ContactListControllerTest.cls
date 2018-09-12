@@ -20,7 +20,7 @@ private class ContactListControllerTest
             Contact c = new Contact();
             c.LastName = i + 'test';
             c.FirstName = 'bob' + i;
-            c.AccountId = accounts[Math.mod(i,10)];
+            c.AccountId = accounts[Math.mod(i,10)].Id;
             Contacts.add(c);
         }
         insert Contacts;
