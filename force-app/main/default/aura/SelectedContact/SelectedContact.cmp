@@ -4,7 +4,6 @@
     <aura:attribute name="cardTitle" type="String" default="Selected Contact"/>
     <aura:attribute name="url" type="String"/>
     <aura:attribute name="pageReference" type="Object"/>
-    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
     <lightning:navigation aura:id="navService"/>
     
     

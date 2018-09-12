@@ -1,5 +1,5 @@
 ({
-    init : function(component, event, helper) {
+    initNav : function(component, event, helper) {
         var navService = component.find("navService");
         // Sets the route to /lightning/o/Account/view
         var pageReference = {
@@ -25,6 +25,7 @@
         component.set("v.Contact", contact);
         component.set("v.cardTitle", contact.Name);
         component.set("v.hasContact", true);
+        component.initNav;
     },
     
     handleClick: function(component, event, helper) {
