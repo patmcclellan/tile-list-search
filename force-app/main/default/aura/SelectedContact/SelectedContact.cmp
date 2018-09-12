@@ -6,7 +6,6 @@
     <aura:attribute name="pageReference" type="Object"/>
     <lightning:navigation aura:id="navService"/>
     
-    
     <aura:handler event="c:SelectContact" action="{!c.onSelectContact}"/>
 
     <lightning:card>
