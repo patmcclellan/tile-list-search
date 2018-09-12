@@ -24,15 +24,15 @@ private class ContactListControllerTest
             contacts.add(c);
         }
         insert contacts;
-        List<Contact> nullRecContacts = ContactListController.findAllContacts(0, '');
+        List<Contact> nullRecContacts = ContactListController.findAllContacts('0', null);
         System.assertEquals(40,nullRecContacts.size());
 
         String recId1 = Contacts[3].id;
-        List<Contact> allContacts = ContactListController.findAllContacts(0, recId1);
+        List<Contact> allContacts = ContactListController.findAllContacts('0', recId1);
         System.assertEquals(40,allContacts.size());
 
         String recId2 = accounts[1].id;
-        List<Contact> accountContacts = ContactListController.findAllContacts(0, recId2);
+        List<Contact> accountContacts = ContactListController.findAllContacts('0', recId2);
         System.assertEquals(4,accountContacts.size());
 
         List<Contact> searchContacts1 = ContactListController.findContactsByKey('0');
