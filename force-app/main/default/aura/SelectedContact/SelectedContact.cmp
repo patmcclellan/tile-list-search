@@ -8,9 +8,9 @@
     <lightning:card>
         <aura:set attribute="title">
             <lightning:icon iconName="standard:contact" size="medium"/>
-            <div class="slds-text-heading_large">
+            <span class="slds-text-heading_medium">
                 Selected Contact
-            </div>
+            </span>
         </aura:set>
         <aura:if isTrue="{!v.hasContact}">
             <dl class="slds-dl_horizontal">
