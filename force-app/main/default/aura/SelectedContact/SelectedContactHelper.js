@@ -6,7 +6,7 @@
             type: 'standard__objectPage',
             attributes: {
                 objectApiName: 'Contact',
-                actionName: 'view'
+                actionName: 'home'
             }
         };
         component.set("v.pageReference", pageReference);
