@@ -7,13 +7,12 @@ public with sharing class ContactListController {
     //used by ContactList.cmp
     @AuraEnabled
     public static List<Contact> findAllContacts(String offset, String recordId) {
-        if (recordId == null) 
-        {
-            return getConListNoRecordId(offset);
-        } else if (recordId.Left(3) == Schema.SObjectType.Account.getKeyPrefix()) //it's an Account record
+       if (recordId.Left(3) == Schema.SObjectType.Account.getKeyPrefix()) //it's an Account record
         {  
             system.debug('Looking for contacts by account: ' + recordId);
             return getConListForAccount(recordId);
+        }else {
+            return getConListNoRecordId(offset);
         }
         return null;
     }
