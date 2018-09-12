@@ -4,13 +4,7 @@
     
     <aura:handler event="c:SelectContact" action="{!c.onSelectContact}"/>
 
-
-    
-    
-    <lightning:card title="Selected Contact">
-        <aura:set attribute="media">
-            <lightning:icon iconName="standard:contact"/>
-        </aura:set>
+    <lightning:card title="{!v.Contact.Name">
         <dl class="slds-dl_horizontal">
             <dt class="slds-dl_horizontal__label">
                 <p class="slds-truncate flush-right" title="Company">Title:</p>
