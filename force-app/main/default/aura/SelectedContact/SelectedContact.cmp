@@ -6,6 +6,10 @@
     <aura:handler event="c:SelectContact" action="{!c.onSelectContact}"/>
 
     <lightning:card title="{!v.cardTitle}">
+        <aura:set attribute="title">
+            <lightning:icon iconName="standard:contact" size="medium"/>
+            {! v.cardTitle }
+        </aura:set>
         <aura:if isTrue="{!v.hasContact}">
             <dl class="slds-dl_horizontal">
                 <dt class="slds-dl_horizontal__label">
