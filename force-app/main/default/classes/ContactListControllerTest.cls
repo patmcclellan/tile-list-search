@@ -14,21 +14,22 @@ private class ContactListControllerTest
         }
         insert accounts;
 
-        List<Contact> Contacts = new List<Contact>();
+        List<Contact> contacts = new List<Contact>();
         for (Integer i=0; i<40; i++ )
         {
             Contact c = new Contact();
             c.LastName = i + 'test';
             c.FirstName = 'bob' + i;
             c.AccountId = accounts[Math.mod(i,10)].Id;
-            Contacts.add(c);
+            contacts.add(c);
         }
-        insert Contacts;
-
-        List<Contact> allContacts = ContactListController.findAllContacts(null);
+        insert contacts;
+        String recId1 = Contacts[3].id;
+        List<Contact> allContacts = ContactListController.findAllContacts(recId1);
         System.assertEquals(40,allContacts.size());
-    
-        List<Contact> accountContacts = ContactListController.findAllContacts(accounts[1].Id);
+
+        String recId2 = accounts[1].id;
+        List<Contact> accountContacts = ContactListController.findAllContacts(recId2);
         System.assertEquals(4,accountContacts.size());
 
         List<Contact> searchContacts1 = ContactListController.findContactsByKey('0');
