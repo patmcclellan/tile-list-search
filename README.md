@@ -1,5 +1,8 @@
 # tile-list-search
 
+See component diagram here: https://www.lucidchart.com/invitations/accept/06b1d4f7-1f5b-4b58-b2e5-0ffa4398c6b0
+
+
 This is a demo of a common architecture pattern used in Lightning development.
 For this example, I'm using a common object, Contacts, though it works with
 any standard or custom object with a little modification.
