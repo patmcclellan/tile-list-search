@@ -1,3 +1,11 @@
 .THIS .flush-right {
     text-align: right;
 }
+
+.THIS .border {
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 1px;
+    border-radius: 4px;
+
+}
