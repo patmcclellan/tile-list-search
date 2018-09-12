@@ -12,7 +12,7 @@
     <span onclick="{!c.onSelectContact}" >
     <lightning:tile label="{!v.Contact.Name}" class="slds-border_bottom slds-p-around_x-small">
         <aura:set attribute="media">
-            <lightning:icon iconName="standard:contact" size="small"/>
+            <lightning:icon iconName="standard:contact"/>
         </aura:set>
         {!v.Contact.Title}  |  {!v.Contact.Account.Name}
         <!-- <dl class="slds-dl_horizontal">
