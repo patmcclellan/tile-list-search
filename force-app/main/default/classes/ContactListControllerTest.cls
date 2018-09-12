@@ -24,7 +24,7 @@ private class ContactListControllerTest
             contacts.add(c);
         }
         insert contacts;
-        List<Contact> nullRecContacts = ContactListController.findAllContacts('0', null);
+        List<Contact> nullRecContacts = ContactListController.findAllContacts('0', '');
         System.assertEquals(40,nullRecContacts.size());
 
         String recId1 = Contacts[3].id;
