@@ -5,9 +5,12 @@
     
     <aura:handler event="c:SelectContact" action="{!c.onSelectContact}"/>
 
-    <lightning:card title="Selected Contact">
+    <lightning:card>
         <aura:set attribute="title">
             <lightning:icon iconName="standard:contact" size="medium"/>
+            <div class="slds-text-heading_large">
+                Selected Contact
+            </div>
         </aura:set>
         <aura:if isTrue="{!v.hasContact}">
             <dl class="slds-dl_horizontal">
