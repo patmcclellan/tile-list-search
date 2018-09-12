@@ -13,7 +13,7 @@
             findAllContacts.setStorable();
             findAllContacts.setParams({
                 'offset' : offset,
-                'recordId': component.get("v.recordId")
+                'recordId': recordId
             });
 
             findAllContacts.setCallback(this, function(response){
