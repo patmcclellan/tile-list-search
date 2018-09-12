@@ -18,6 +18,7 @@
             }), $A.getCallback(function(error) {
                 component.set("v.url", defaultUrl);
             }));
+        console.log("Url: " + component.get("v.url"));
     },
     
     onSelectContact : function(component, event, helper) {
