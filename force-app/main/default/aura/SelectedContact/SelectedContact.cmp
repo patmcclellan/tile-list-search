@@ -3,6 +3,7 @@
     <aura:attribute name="hasContact" type="Boolean" default="false"/>
     <aura:attribute name="cardTitle" type="String" default="Selected Contact"/>
     
+    
     <aura:handler event="c:SelectContact" action="{!c.onSelectContact}"/>
 
     <lightning:card>
@@ -19,7 +20,7 @@
                     <p class="slds-truncate flush-right" title="Name">Name:</p>
                 </dt>
                 <dd class="slds-dl_horizontal__detail slds-tile__meta">
-                    <p class="slds-text-heading_small" title="Name">{!v.Contact.Name}</p>
+                    <a href="{!v.Contact.Id}" onclick="{!c.handleClick}">{!v.Contact.Name}</a>
                 </dd>
                 <dt class="slds-dl_horizontal__label">
                     <p class="slds-truncate flush-right" title="Title">Title:</p>
