@@ -42,10 +42,12 @@
     },
 
     getTotalContacts : function (component, event, helper)
-    {
+    {   
+        var recordId = component.get("v.recordId");
+        if(!recordId) recordId = '';
         var action = component.get("c.getContactsCount");
         action.setParams({
-            "recordId" : component.get("v.recordId")
+            "recordId" : recordId
         });
         action.setCallback(this, $A.getCallback(function(response){
             var state = response.getState();
