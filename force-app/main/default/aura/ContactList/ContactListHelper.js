@@ -66,7 +66,8 @@
         if(searchKey.trim() == '') // search is empty, return to previous list
         {
             component.set("v.searching", false);
-            Object.assign(component.get("v.Contacts", component.get("v.AllContactsSoFar")));
+            Object.assign(oldContacts, component.get("v.AllContactsSoFar"));
+            component.set("v.Contacts", oldContacts);
         }else 
         {
             var findContactsByKey = component.get("c.findContactsByKey");
