@@ -5,7 +5,6 @@
     
     <aura:handler event="c:SelectContact" action="{!c.onSelectContact}"/>
 
-    
     <lightning:card title="{!v.cardTitle">
         <aura:if isTrue='hasContact'>
             <dl class="slds-dl_horizontal">
