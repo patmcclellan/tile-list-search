@@ -14,7 +14,8 @@
         <aura:set attribute="media">
             <lightning:icon iconName="standard:contact"/>
         </aura:set>
-        <dl class="slds-dl_horizontal">
+        {!v.Contact.Title}  |  {!v.Contact.Account.Name}
+        <!-- <dl class="slds-dl_horizontal">
             
             <dd class="slds-dl_horizontal__detail slds-tile__meta">
                 <p class="slds-truncate" title="Title">{!v.Contact.Title}</p>
@@ -23,7 +24,7 @@
             <dd class="slds-dl_horizontal__detail slds-tile__meta">
                 <p class="slds-truncate" title="Company Name">{!v.Contact.Account.Name}</p>
             </dd>
-        </dl>
+        </dl> -->
         <!-- <dl class="slds-dl_horizontal detail">
             <dd class="slds-dl_horizontal__detail slds-tile__meta " >
                 <p class="truncate" title="Title">{!v.Contact.Title} • {!v.Contact.Account.Name}</p>
