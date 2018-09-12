@@ -34,12 +34,12 @@ public with sharing class ContactListController {
     //used by ContactList.cmp
     @AuraEnabled
     public static List<Contact> findContactsByKey(String searchKey) {
-        String name = '%' + searchKey + '%';
+        String name = searchKey + '%';
         if (Contact.SObjectType.getDescribe().isAccessible()) {
             return [
                 SELECT id, Name, Title, Account.Name, Phone, Email
                 FROM Contact
-                WHERE name LIKE :name OR Account.Name LIKE :name
+                WHERE FirstName LIKE :name OR LastName LIKE :name OR Account.Name LIKE :name
                 ORDER BY LastName ASC
                 LIMIT 30];
         }
