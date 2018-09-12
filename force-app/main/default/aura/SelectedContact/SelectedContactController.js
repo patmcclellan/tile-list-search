@@ -8,13 +8,13 @@
         helper.initNav(component);
     },
     
-    handleClick: function(component, event, helper) {
-        var navService = component.find("navService");
-        // Uses the pageReference definition in the init handler
-        var pageReference = component.get("v.url");
-        event.preventDefault();
-        navService.navigate(pageReference);
-    },
+    // handleClick: function(component, event, helper) {
+    //     var navService = component.find("navService");
+    //     // Uses the pageReference definition in the init handler
+    //     var pageReference = component.get("v.url");
+    //     event.preventDefault();
+    //     navService.navigate(pageReference);
+    // },
 
     //more code here
  

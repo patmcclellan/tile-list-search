@@ -21,7 +21,6 @@
             }), $A.getCallback(function(error) {
                 component.set("v.url", defaultUrl);
             }));
-        console.log("Url: " + component.get("v.url"));
     },
     
 })
