@@ -1,14 +1,15 @@
 ({
     initNav : function(component) {
         var recordId = component.get("v.Contact.Id");
+        console.log("recordId: " + recordId);
         var navService = component.find("navService");
         // Sets the route to /lightning/o/Account/view
         var pageReference = {
             type: 'standard__recordPage',
             attributes: {
                 recordId: recordId,
-                objectApiName: 'Contact',
-                actionName: 'view'
+                objectApiName: "Contact",
+                actionName: "view"
             }
         };
         component.set("v.pageReference", pageReference);
