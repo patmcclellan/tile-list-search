@@ -20,14 +20,14 @@ public with sharing class ContactListController {
     @AuraEnabled
     public static Integer getContactsCount(String recordId) 
     {
-        if (recordId == null) 
-        {
-            return [SELECT Count() FROM Contact ];
-        } else if (recordId.Left(3) == Schema.SObjectType.Account.getKeyPrefix()) //it's an Account record
+        if (recordId.Left(3) == Schema.SObjectType.Account.getKeyPrefix()) //it's an Account record
         {  
             return [SELECT Count() FROM Contact WHERE AccountId =: recordId];
+        } else
+        {        
+            return [SELECT Count() FROM Contact ];
         }
-        return null;
+
     }
 
     //used by ContactList.cmp
