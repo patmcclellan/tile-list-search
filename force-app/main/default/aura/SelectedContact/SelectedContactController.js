@@ -26,7 +26,7 @@
         component.set("v.Contact", contact);
         component.set("v.cardTitle", contact.Name);
         component.set("v.hasContact", true);
-        component.initNav;
+        component.initNav(component);
     },
     
     handleClick: function(component, event, helper) {
