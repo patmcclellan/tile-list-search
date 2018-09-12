@@ -15,21 +15,6 @@
             <lightning:icon iconName="standard:contact"/>
         </aura:set>
         {!v.Contact.Title}  |  {!v.Contact.Account.Name}
-        <!-- <dl class="slds-dl_horizontal">
-            
-            <dd class="slds-dl_horizontal__detail slds-tile__meta">
-                <p class="slds-truncate" title="Title">{!v.Contact.Title}</p>
-            </dd>
-          
-            <dd class="slds-dl_horizontal__detail slds-tile__meta">
-                <p class="slds-truncate" title="Company Name">{!v.Contact.Account.Name}</p>
-            </dd>
-        </dl> -->
-        <!-- <dl class="slds-dl_horizontal detail">
-            <dd class="slds-dl_horizontal__detail slds-tile__meta " >
-                <p class="truncate" title="Title">{!v.Contact.Title} • {!v.Contact.Account.Name}</p>
-            </dd>
-        </dl> -->
     </lightning:tile>
 
     </span>
