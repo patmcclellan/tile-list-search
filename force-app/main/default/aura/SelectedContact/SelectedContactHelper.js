@@ -3,10 +3,10 @@
         var navService = component.find("navService");
         // Sets the route to /lightning/o/Account/view
         var pageReference = {
-            type: 'standard__objectPage',
+            type: 'standard__recordPage',
             attributes: {
                 objectApiName: 'Contact',
-                actionName: 'home'
+                actionName: 'view'
             }
         };
         component.set("v.pageReference", pageReference);
