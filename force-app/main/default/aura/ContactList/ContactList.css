@@ -1,7 +1,7 @@
 .THIS.scrollerSize {
     border-top: solid 1px lightgray;
     overflow:scroll;
-    height: 500px;
+    max-height: 500px;
     overscroll-behavior: contain;
 }
 
