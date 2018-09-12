@@ -5,6 +5,7 @@
         var pageReference = {
             type: 'standard__recordPage',
             attributes: {
+                recordId: component.get("v.Contact.Id"),
                 objectApiName: 'Contact',
                 actionName: 'view'
             }
