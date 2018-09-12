@@ -4,7 +4,7 @@ This is a demo of a common architecture pattern used in Lightning development.
 
 The outer component in this demo is called ArchitectureDemo.cmp.
 It provides the wrapper for placement of the integral components,
-as well as provided a Label and Icon.
+with a Label and Icon.
 
 At the top of the layout, we have the SearchBar.cmp, with a scrollable
 ContactList.cmp below. The server logic is contained in ContactList.
