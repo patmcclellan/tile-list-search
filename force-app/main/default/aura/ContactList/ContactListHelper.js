@@ -63,7 +63,7 @@
         var searchKey = event.getParam("searchKey");
         if(searchKey.trim() == '') // search is empty, return to previous list
         {
-            component.set("v.Contacts", component.get("v.AllContactsSoFar"));
+            Object.assign(component.get("v.Contacts", component.get("v.AllContactsSoFar")));
         }else 
         {
             var findContactsByKey = component.get("c.findContactsByKey");
