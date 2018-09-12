@@ -8,7 +8,7 @@
 
         //set ConversationId  and GroupName and fire SelectConversation event
         var Contact = component.get("v.Contact");
-        var SelectContact = component.getEvent("SelectContact");
+        var SelectContact = $A.get("e.c:SelectContact");
         SelectContact.setParams({"Contact": Contact});
         SelectContact.fire();
         // console.log("🔥 SelectContact fired | Contact: " + Contact.Name);
