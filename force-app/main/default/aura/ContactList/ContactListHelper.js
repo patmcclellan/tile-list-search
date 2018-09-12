@@ -81,6 +81,7 @@
                     component.set("v.Contacts", Contacts);
                     if (Contacts.length > 0)
                     {
+                        console.log('🔎 Found contacts: ' + Contact.length);
                         component.set("v.hasContact", true);
                     }else
                     {
