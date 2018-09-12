@@ -1,9 +1,9 @@
 ({
     findAllContacts : function(component, event, helper)
     {
-        console.log("😛 findAllContacts");
         if (component.get("v.totalContacts")>=parseInt(component.get("v.offset")))
-        {
+        { 
+            console.log("😛 findAllContacts");
             var spinner = component.find("spinner");
             $A.util.toggleClass(spinner, "slds-hide");
             var offset =  component.get("v.offset");
@@ -35,6 +35,8 @@
             });
             $A.enqueueAction(findAllContacts);
         }
+
+        console.log("🙁 no more contacts to find");
     },
 
     getTotalContacts : function (component, event, helper)
