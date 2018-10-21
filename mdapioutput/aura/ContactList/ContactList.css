@@ -1,0 +1,23 @@
+.THIS.scrollerSize {
+    border-top: solid 1px lightgray;
+    overflow:scroll;
+    max-height: 380px;
+    overscroll-behavior: contain;
+}
+
+.THIS .no-contacts{
+    text-align: center;
+    font-style: italic;
+    padding-top: 20px;
+}
+
+.THIS.searchBar{
+    margin-bottom: 8px;
+}
+
+.THIS.exampleHolder{
+    margin-top: -100px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}

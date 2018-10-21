@@ -1,0 +1,48 @@
+<!--
+ - Created by pmcclellan on 09/04/18.
+ -->
+
+ <aura:component description="ContactList"
+    implements="force:hasRecordId"
+    controller="ContactListController">
+
+    <aura:attribute name="Contacts" type="Contact[]"/>
+    <aura:attribute name="AllContactsSoFar" type="Contact[]"/>
+    <aura:attribute name="hasContact" type="Boolean" default="true"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="intervalId" type="Object" />
+    <aura:attribute name="offset" type="String" default="0"/>
+    <aura:attribute name="totalContacts" type="Integer" default="0"/>
+    <aura:attribute name="searching" type="Boolean" default="false"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="SearchKeyChange" event="c:SearchKeyChange" action="{!c.onSearchKeyChange}"/>
+
+    <div class="searchBar" >
+        <c:SearchBar/>
+    </div>
+
+    <div aura:id="scroll_container" class="scrollerSize">
+        <aura:if isTrue="{!v.hasContact}">
+
+            <aura:iteration items="{!v.Contacts}" var="Contact">
+                <c:ContactTile Contact="{!Contact}" />
+            </aura:iteration>
+
+            <aura:set attribute="else">
+                <div class="no-contacts">
+                    <p>No Contacts found.</p>
+                </div>
+            </aura:set>
+
+        </aura:if>
+    </div>
+    <footer class="slds-card__footer">
+            <div class="exampleHolder" style="position:relative">
+                <lightning:spinner aura:id="spinner" alternativeText="Loading" size="medium" variant="brand"  />
+            </div>
+            <div>
+                {!v.Contacts.length} of {!v.totalContacts} Contacts
+            </div>
+    </footer>
+</aura:component>

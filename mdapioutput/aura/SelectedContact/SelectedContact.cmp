@@ -1,0 +1,59 @@
+<aura:component description="Selected Contact" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="Contact" type="Object"/>
+    <aura:attribute name="hasContact" type="Boolean" default="false"/>
+    <aura:attribute name="cardTitle" type="String" default="Selected Contact"/>
+    <aura:attribute name="url" type="String"/>
+    <aura:attribute name="pageReference" type="Object"/>
+    <lightning:navigation aura:id="navService"/>
+    
+    <aura:handler event="c:SelectContact" action="{!c.onSelectContact}"/>
+
+    <lightning:card>
+        <aura:set attribute="title">
+            <lightning:icon iconName="standard:contact" size="medium"/>
+            <span class="slds-text-heading_medium slds-p-left_x-small">
+                Selected Contact
+            </span>
+        </aura:set>
+        <aura:if isTrue="{!v.hasContact}">
+            <div class="slds-m-horizontal_xx-large slds-p-around_medium border">
+            <dl class="slds-dl_horizontal">
+                <dt class="slds-dl_horizontal__label">
+                    <p class="slds-truncate flush-right" title="Name">Name:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <a href="{!v.url}">{!v.Contact.Name}</a>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                    <p class="slds-truncate flush-right" title="Title">Title:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title="Title">{!v.Contact.Title}</p>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                    <p class="slds-truncate flush-right" title="Company">Company:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title="Company Name">{!v.Contact.Account.Name}</p>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                    <p class="slds-truncate flush-right" title="Email">Email:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title="Email"><a href="{! 'mailto:' + v.Contact.Email}">{!v.Contact.Email}</a></p>
+                </dd>
+                <dt class="slds-dl_horizontal__label">
+                    <p class="slds-truncate flush-right" title="Phone">Phone:</p>
+                </dt>
+                <dd class="slds-dl_horizontal__detail slds-tile__meta">
+                    <p class="slds-truncate" title="Phone">{!v.Contact.Phone}</p>
+                </dd>
+            </dl>
+            <aura:set attribute="else">
+                No contact selected.
+            </aura:set>
+            </div>
+        </aura:if>
+    </lightning:card>
+
+</aura:component>	
